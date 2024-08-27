@@ -1,14 +1,37 @@
 import React from "react"
+import TodayFootballCard from "../../cards/todayFootballCard";
 
-interface ScrollComponents {
-    components: React.ReactNode[];
+type team ={
+    name:string;
+    imgUrl: string
 }
 
-const HorizontalScroller: React.FC<ScrollComponents> = ({ components }) => {
+export type dataFromApi = {
+    id:string;
+    team1:team;
+    team2:team;
+    time:string;
+    category:string;
+}
+
+interface ScrollComponentsData {
+    data: dataFromApi[];
+}
+
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data }) => {
     return (
         <div className="horizontalScroller">{
-            components.map((component) =>
-                <div key={1}>{component}</div>
+            data.map((game) =>
+                <TodayFootballCard 
+                    key={game.id} 
+                    todayCardData= {{
+                        team1Name:game.team1.name,
+                        team2Name:game.team2.name,
+                        team1ImgUrl:game.team1.imgUrl,
+                        team2ImgUrl:game.team2.imgUrl,
+                        time:game.time
+                    }}
+                />
             )}
         </div>
     )

@@ -8,7 +8,7 @@ const PlayerCard = () => {
                 <div className="participantInfo">
                     <div className="participantNameAndAge">
                         <span className="participantName">isaac mwesigwa</span>
-                        <span className="age">29 yrs</span>
+                        <span className="age">24 yrs</span>
                     </div>
 
 
