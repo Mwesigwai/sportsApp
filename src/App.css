@@ -270,13 +270,15 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: .4em;
+  font-family: var(--primaryFont);
+  text-align: center;
+
 }
 
 .team1Score,
 .team2Score {
   width: 30px;
   height: 15px;
-  background-color: #505050;
   margin-top: 8px;
   border-radius: 5px;
 }

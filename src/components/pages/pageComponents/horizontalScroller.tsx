@@ -2,6 +2,7 @@ import React from "react"
 import TodayFootballCard from "../../cards/todayFootballCard";
 import UpcomingFootballCard from "../../cards/upcomingFootballCard";
 import { dataFromApi } from "./dataFromApi";
+import LiveFootballCard from "../../cards/liveFootballCard";
 
 export type team ={
     name:string;
@@ -13,8 +14,8 @@ interface ScrollComponentsData {
     displayCard:React.FC<any>;
 }
 
-const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard: card }) => {
-    switch (card) {
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard}) => {
+    switch (displayCard) {
         case TodayFootballCard:
             return (
                 <div className="horizontalScroller">{
@@ -46,6 +47,25 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard:
                                 date:game.date
                             }}
 
+                            key={game.id}
+                        />
+                    )}
+                </div>
+            )
+        
+        case LiveFootballCard:
+            return(
+                <div className="horizontalScroller">{
+                    data.map((game) =>
+                        <LiveFootballCard 
+                            gameData={{
+                                team1Name:game.team1.name,
+                                team1ImgUrl:game.team1.imgUrl,
+                                team2Name:game.team2.name,
+                                team2ImgUrl:game.team2.imgUrl,
+                                scores:game.scores
+                            }}
+                            favIconUrl="/images/star.png"
                             key={game.id}
                         />
                     )}

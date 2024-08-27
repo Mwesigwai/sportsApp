@@ -8,4 +8,5 @@ export type dataFromApi = {
     time: string;
     date:string;
     category: string;
+    scores:{team1Score:number, team2Score:number}
 };
