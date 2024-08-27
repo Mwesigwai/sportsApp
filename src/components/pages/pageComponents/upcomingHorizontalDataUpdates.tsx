@@ -12,7 +12,7 @@ const UpcomingHorizontalDataUpdates: React.FC<todayHorizontalDataUpdatesProps> =
     return (
         <>
             <HorizontalScrollLabel sectionTitle="upcoming" />
-            <HorizontalScroller data={games} card={UpcomingFootballCard} />
+            <HorizontalScroller data={games} displayCard={UpcomingFootballCard} />
         </>
     )
 }

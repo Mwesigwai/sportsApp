@@ -10,10 +10,10 @@ export type team ={
 
 interface ScrollComponentsData {
     data: dataFromApi[];
-    card:React.FC<any>;
+    displayCard:React.FC<any>;
 }
 
-const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, card }) => {
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard: card }) => {
     switch (card) {
         case TodayFootballCard:
             return (
