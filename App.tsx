@@ -5,7 +5,7 @@ import MainPageContentView from './src/components/pages/pageComponents/mainPageC
 function App() {
   return (
     <MainPageContentView
-      pageContent={< DefaultPage/>}
+      pageContent={< DefaultPage />}
     />
   )
 }
