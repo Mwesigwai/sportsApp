@@ -1,0 +1,175 @@
+{
+    "today": [
+      {
+        "id": "1",
+        "team1": {
+          "name": "Team A",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team B",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "time": "14:00",
+        "category": "Football"
+      },
+      {
+        "id": "2",
+        "team1": {
+          "name": "Team C",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team D",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "time": "18:00",
+        "category": "Basketball"
+      }
+    ],
+    "upcoming": [
+      {
+        "id": "3",
+        "team1": {
+          "name": "Team E",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team F",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "time": "20:00",
+        "date": "2024-09-01",
+        "category": "Tennis"
+      },
+      {
+        "id": "4",
+        "team1": {
+          "name": "Team G",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team H",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "time": "22:00",
+        "date": "2024-09-02",
+        "category": "Cricket"
+      }
+    ],
+    "live": [
+      {
+        "id": "5",
+        "team1": {
+          "name": "Team I",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team J",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "category": "Football",
+        "scores": {
+          "team1Score": 2,
+          "team2Score": 3
+        }
+      },
+      {
+        "id": "6",
+        "team1": {
+          "name": "Team K",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team L",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "category": "Basketball",
+        "scores": {
+          "team1Score": 80,
+          "team2Score": 75
+        }
+      }
+    ],
+    "recent": [
+      {
+        "id": "7",
+        "team1": {
+          "name": "Team M",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team N",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "category": "Football",
+        "scores": {
+          "team1Score": 1,
+          "team2Score": 0
+        }
+      },
+      {
+        "id": "8",
+        "team1": {
+          "name": "Team O",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+          "name": "Team P",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "category": "Rugby",
+        "scores": {
+          "team1Score": 20,
+          "team2Score": 18
+        }
+      }
+    ],
+    "sportParticipants": [
+      {
+        "id": "9",
+        "imgUrl": "/images/me.jpeg",
+        "name": "Player 1",
+        "age": 24,
+        "team": {
+          "name": "Team Q",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "role": "Forward"
+      },
+      {
+        "id": "10",
+        "imgUrl": "/images/me.jpeg",
+        "name": "Player 2",
+        "age": 29,
+        "team": {
+          "name": "Team R",
+          "imgUrl": "/images/me.jpeg"
+        },
+        "role": "Goalkeeper"
+      }
+    ],
+    "sportGrounds": [
+      {
+        "imgUrl": "/images/me.jpeg",
+        "name": "Stadium 1"
+      },
+      {
+        "imgUrl": "/images/me.jpeg",
+        "name": "Arena 2"
+      }
+    ],
+    "sportImportantFolks": [
+      {
+        "imgUrl": "/images/me.jpeg",
+        "name": "Coach 1",
+        "role": "Head Coach"
+      },
+      {
+        "imgUrl": "/images/me.jpeg",
+        "name": "Referee 1",
+        "role": "Referee"
+      }
+    ]
+  }
+  

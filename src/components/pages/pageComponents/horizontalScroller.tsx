@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react"
 import TodayFootballCard from "../../cards/todayFootballCard";
 import UpcomingFootballCard from "../../cards/upcomingFootballCard";
 import LiveFootballCard from "../../cards/liveFootballCard";
@@ -12,31 +11,15 @@ export type team = {
 
 interface ScrollComponentsData {
     displayCard: React.ElementType;
+    dataFromAPi: dataFromApi|null;
 }
 
-const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard }) => {
-    const [data, setData] = useState<dataFromApi[]>([]);
-    let fetchData;
-    
-    const  fetchFromApi = (url:string) => {
-        useEffect(() => {
-            fetchData = async () => {
-                const response = await fetch(url);
-                const result = await response.json();
-                setData(result);
-            }
-            fetchData().catch(e => console.log(e));
-    
-        }, [displayCard])
-    }
-
-
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard, dataFromAPi}) => {
     switch (displayCard) {
         case TodayFootballCard:
-            fetchFromApi('todaySports.json')
             return (
                 <div className="horizontalScroller">{
-                    data.map((game) =>
+                    dataFromAPi?.today.map((game) =>
                         <TodayFootballCard
                             todayCardData={{
                                 team1Name: game.team1.name,
@@ -52,10 +35,9 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard }) => 
             )
 
         case UpcomingFootballCard:
-            fetchFromApi('/upcomingSports.json')
             return (
                 <div className="horizontalScroller">{
-                    data.map((game) =>
+                    dataFromAPi?.upcoming.map((game) =>
                         <UpcomingFootballCard
                             upcomingCardDataObj={{
                                 team1Name: game.team1.name,
@@ -73,10 +55,9 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard }) => 
             )
 
         case LiveFootballCard:
-            fetchFromApi('/liveSports.json')
             return (
                 <div className="horizontalScroller">{
-                    data.map((game) =>
+                    dataFromAPi?.live.map((game) =>
                         <LiveFootballCard
                             gameData={{
                                 team1Name: game.team1.name,
@@ -95,7 +76,7 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard }) => 
         case RecentFootballCard:
             return (
                 <div className="horizontalScroller">{
-                    data.map((game) =>
+                    dataFromAPi?.recent.map((game) =>
                         <RecentFootballCard
                             gameData={{
                                 team1Name: game.team1.name,
