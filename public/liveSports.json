@@ -1,0 +1,51 @@
+[
+    {
+        "id": "u",
+        "team1": {
+            "name": "vipers",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+            "name": "bulls",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "category": "one on one",
+        "scores": {
+            "team1Score": 1,
+            "team2Score": 2
+        }
+    },
+    {
+        "id": "ho",
+        "team1": {
+            "name": "buwagi stars",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+            "name": "kyomya",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "category": "one on one",
+        "scores": {
+            "team1Score": 1,
+            "team2Score": 2
+        }
+    },
+
+    {
+        "id": "jkklo",
+        "team1": {
+            "name": "vipers",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "team2": {
+            "name": "mabatithief",
+            "imgUrl": "/images/me.jpeg"
+        },
+        "category": "one on one",
+        "scores": {
+            "team1Score": 2,
+            "team2Score": 0
+        }
+    }
+]

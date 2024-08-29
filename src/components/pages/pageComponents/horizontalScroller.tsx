@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import TodayFootballCard from "../../cards/todayFootballCard";
 import UpcomingFootballCard from "../../cards/upcomingFootballCard";
-import { dataFromApi } from "./dataFromApi";
 import LiveFootballCard from "../../cards/liveFootballCard";
 import RecentFootballCard from "../../cards/recentFootballCard";
+import { dataFromApi } from "./dataFromApi";
 
 export type team = {
     name: string;
@@ -11,13 +11,29 @@ export type team = {
 }
 
 interface ScrollComponentsData {
-    data: dataFromApi[];
-    displayCard: React.FC<any>;
+    displayCard: React.ElementType;
 }
 
-const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard }) => {
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard }) => {
+    const [data, setData] = useState<dataFromApi[]>([]);
+    let fetchData;
+    
+    const  fetchFromApi = (url:string) => {
+        useEffect(() => {
+            fetchData = async () => {
+                const response = await fetch(url);
+                const result = await response.json();
+                setData(result);
+            }
+            fetchData().catch(e => console.log(e));
+    
+        }, [displayCard])
+    }
+
+
     switch (displayCard) {
         case TodayFootballCard:
+            fetchFromApi('todaySports.json')
             return (
                 <div className="horizontalScroller">{
                     data.map((game) =>
@@ -36,6 +52,7 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard 
             )
 
         case UpcomingFootballCard:
+            fetchFromApi('/upcomingSports.json')
             return (
                 <div className="horizontalScroller">{
                     data.map((game) =>
@@ -56,6 +73,7 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ data, displayCard 
             )
 
         case LiveFootballCard:
+            fetchFromApi('/liveSports.json')
             return (
                 <div className="horizontalScroller">{
                     data.map((game) =>

@@ -1,18 +1,13 @@
 import React from "react";
 import HorizontalScrollLabel from "./horizontalScrollLabel";
 import HorizontalScroller from "./horizontalScroller";
-import { dataFromApi } from "./dataFromApi";
 import RecentFootballCard from "../../cards/recentFootballCard";
 
-type recentGameHorizontalDataUpdatesProps ={
-    games:dataFromApi[];
-}
-
-const RecentGameHorizontalDataUpdates: React.FC<recentGameHorizontalDataUpdatesProps> = ({games}) => {
+const RecentGameHorizontalDataUpdates: React.FC = () => {
     return (
         <>
             <HorizontalScrollLabel sectionTitle="recent" />
-            <HorizontalScroller data={games} displayCard={RecentFootballCard} />
+            <HorizontalScroller displayCard={RecentFootballCard} />
         </>
     )
 }
