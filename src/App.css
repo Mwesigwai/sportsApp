@@ -371,7 +371,7 @@ body {
 }
 
 .horizontalRectangleSmall {
-  width: 166px;
+  min-width: 166px;
   height: 229px;
   border-radius: 10px;
   margin: 5px 4px;

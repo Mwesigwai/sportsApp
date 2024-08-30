@@ -1,20 +1,36 @@
+import React from "react";
+import { team } from "../pages/pageComponents/horizontalScroller";
 
-const PlayerCard = () => {
+type playerCardPropObj = {
+    id:string;
+    imgUrl:string;
+    name:string;
+    age:number;
+    team:team;
+    role:string;
+}
+
+type playerCardProps = {
+    data: playerCardPropObj;
+}
+
+const PlayerCard:React.FC<playerCardProps> = ({data}) => {
+
     return (
         <div className="horizontalRectangleSmall">
             <div className="image">
-                <img src="/images/me.jpeg" alt=""/>
+                <img src = {data.imgUrl} alt=""/>
 
                 <div className="participantInfo">
                     <div className="participantNameAndAge">
-                        <span className="participantName">isaac mwesigwa</span>
-                        <span className="age">24 yrs</span>
+                        <span className="participantName">{data.name}</span>
+                        <span className="age">{data.age}</span>
                     </div>
 
 
                     <div className="teamLogoAndName">
-                        <img src="/images/me.jpeg" alt="" />
-                        <span className="participantTeam">bulls fc</span>
+                        <img src={data.team.imgUrl} alt="" />
+                        <span className="participantTeam">{data.team.name}</span>
                         <span className="role">defender</span>
                     </div>
                 </div>

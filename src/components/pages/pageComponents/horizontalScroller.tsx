@@ -3,6 +3,8 @@ import UpcomingFootballCard from "../../cards/upcomingFootballCard";
 import LiveFootballCard from "../../cards/liveFootballCard";
 import RecentFootballCard from "../../cards/recentFootballCard";
 import { dataFromApi } from "./dataFromApi";
+import PlayerCard from "../../cards/PlayerCard";
+import PlaygroundCard from "../../cards/playgroundCard";
 
 export type team = {
     name: string;
@@ -11,10 +13,10 @@ export type team = {
 
 interface ScrollComponentsData {
     displayCard: React.ElementType;
-    dataFromAPi: dataFromApi|null;
+    dataFromAPi: dataFromApi | null;
 }
 
-const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard, dataFromAPi}) => {
+const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard, dataFromAPi }) => {
     switch (displayCard) {
         case TodayFootballCard:
             return (
@@ -87,6 +89,38 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard, dataF
                             }}
                             key={game.id}
                         />
+                    )}
+                </div>
+            )
+
+        case PlayerCard:
+            return (
+                <div className="horizontalScroller">{
+                    dataFromAPi?.sportParticipants.map((game) =>
+                        <PlayerCard key={game.id} data={
+                            {
+                                id: game.id,
+                                imgUrl: game.imgUrl,
+                                name: game.name,
+                                age: game.age,
+                                team: game.team,
+                                role: game.role
+                            }
+                        } />
+                    )}
+                </div>
+            )
+
+        case PlaygroundCard:
+            return (
+                <div className="horizontalScroller">{
+                    dataFromAPi?.sportParticipants.map((game) =>
+                        <PlaygroundCard key={game.id} data={
+                            {
+                                imgUrl:game.imgUrl,
+                                name:game.name
+                            }
+                        } />
                     )}
                 </div>
             )
