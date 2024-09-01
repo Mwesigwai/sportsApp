@@ -22,7 +22,7 @@ const DefaultPage: React.FC = () => {
             <SearchComponent setSearchItem={setSearchItem} searchText={searchItem} />
             <SearchResultMathes searchItem={searchItem} setSelectedItem={setSelectedItem} setSearchItem={setSearchItem}/>
             
-            <SelectedSportBar gameName={selectedItem} filterIconUrl="/images/filter.png" />
+            <SelectedSportBar gameName={selectedItem} filterIconUrl="sportsApp/images/filter.png" />
             <SelectedSportFilterModel cancelIconUrl="" />
 
             <DefaultMainPageData selectedItem={selectedItem}/>

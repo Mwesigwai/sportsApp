@@ -7,12 +7,12 @@ import UpdatesPage from './src/components/pages/updatesPage'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='sportsApp'>
       <Routes>
         <Route path='/' element={<Navigation
-          homeIconUrl='/images/home.png'
-          updatesIconUrl='/images/updates.png'
-          starIconUrl='/images/star.png' />}>
+          homeIconUrl='/sportsApp/images/home.png'
+          updatesIconUrl='/sportsApp/images/updates.png'
+          starIconUrl='/sportsApp/images/star.png' />}>
 
           <Route index element={<DefaultPage />} />
           <Route path='updates' element={<UpdatesPage />}/>

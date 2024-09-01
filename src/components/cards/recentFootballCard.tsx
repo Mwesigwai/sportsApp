@@ -20,7 +20,7 @@ const RecentFootballCard:React.FC<recentFootballCardProps> = ({gameData})=>{
             <TeamsHeader team1Name={gameData.team1Name} team2Name={gameData.team2Name}/>
             <TeamLogos team1ImgUrl={gameData.team1ImgUrl} team2ImgUrl={gameData.team2ImgUrl}/>
             <Scores team1Score={gameData.scores.team1Score} team2Score={gameData.scores.team2Score}/>
-            <PrimaryCardFooter showDate = {true} showTime ={true} favIcon="/images/star.png"/>
+            <PrimaryCardFooter showDate = {true} showTime ={true} favIcon="sportsApp/images/star.png"/>
         </div>
     )
 }

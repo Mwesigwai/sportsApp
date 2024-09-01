@@ -22,7 +22,7 @@ const UpcomingFootballCard:React.FC<upcomingFootballCardProps> = ({upcomingCardD
         <div className="upcomingCard primaryFootballCard">
             <TeamsHeader team1Name={upcomingCardDataObj.team1Name} team2Name={upcomingCardDataObj.team2Name}/>
             <TeamLogos team1ImgUrl={upcomingCardDataObj.team1ImgUrl} team2ImgUrl={upcomingCardDataObj.team2ImgUrl}/>
-            <PrimaryCardFooter showDate ={true} date={upcomingCardDataObj.date} showTime ={true} time={upcomingCardDataObj.time} favIcon="/images/star.png" />
+            <PrimaryCardFooter showDate ={true} date={upcomingCardDataObj.date} showTime ={true} time={upcomingCardDataObj.time} favIcon="sportsApp/images/star.png" />
         </div>
     )
 }

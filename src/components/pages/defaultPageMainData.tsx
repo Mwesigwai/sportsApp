@@ -16,7 +16,7 @@ const DefaultMainPageData: React.FC<defaultPageMainDataProps> = ({ selectedItem 
     const [data, setData] = useState<dataFromApi | null>(null)
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('mockSportsData.json');
+            const response = await fetch('sportsApp/mockSportsData.json');
             const data: dataFromApi = await response.json();
             setData(data);
         }

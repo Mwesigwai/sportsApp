@@ -68,7 +68,7 @@ const HorizontalScroller: React.FC<ScrollComponentsData> = ({ displayCard, dataF
                                 team2ImgUrl: game.team2.imgUrl,
                                 scores: game.scores
                             }}
-                            favIconUrl="/images/star.png"
+                            favIconUrl="sportsApp/images/star.png"
                             key={game.id}
                         />
                     )}

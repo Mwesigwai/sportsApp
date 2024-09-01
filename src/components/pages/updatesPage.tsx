@@ -6,7 +6,7 @@ import UpdatesFeed from "./pageComponents/updatesFeed";
 const UpdatesPage: React.FC = () => {
     return (
         <div className="updatesPage">
-            <UpdatesPageHeader addIconUrl="/images/add.png"filterIconUrl="/images/filter.png"/>
+            <UpdatesPageHeader addIconUrl="/sportsApp/images/add.png"filterIconUrl="/sportsApp/images/filter.png"/>
             <UpdatesPageTabNav options={['sports', 'businesses', 'sponsors', 'news']}/>
             <UpdatesFeed/>
         </div>
