@@ -5,7 +5,7 @@ const DefaultToournamentCard = () => {
     return (
         <div className="defaultTournamentCard primaryFootballCard">
             <div className="tournamentTitle"></div>
-            <PrimaryCardFooter favIcon="/images/star.png"/>
+            <PrimaryCardFooter favIcon="/images/star.png" showDate = {false} showTime = {false}/>
         </div>
     )
 }
