@@ -12,12 +12,12 @@ const DefaultPage: React.FC = () => {
     const [searchItem, setSearchItem] = useState('');
     return (
         <div className="defaultPage">
-            <Header imageUrl='/images/me.jpeg' />
+            {/* <Header imageUrl='/images/me.jpeg' />
             <Navigation
                 homeIconUrl='/images/home.png'
                 updatesIconUrl='/images/updates.png'
                 starIconUrl='/images/star.png'
-            />
+            /> */}
 
             <SearchComponent setSearchItem={setSearchItem} searchText={searchItem} />
             <SearchResultMathes searchItem={searchItem} setSelectedItem={setSelectedItem} setSearchItem={setSearchItem}/>

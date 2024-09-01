@@ -1,3 +1,6 @@
+import { Link, Outlet } from "react-router-dom"
+
+
 interface IconProps {
     homeIconUrl: string;
     updatesIconUrl: string;
@@ -9,15 +12,15 @@ const Navigation = (icons: IconProps) => {
         <div className="navigation">
             <div className="navContainer">
                 <div className="navigationComponent">
-                    <div className="iconDiv">
+                    <Link className="iconDiv" to={'/'}>
                         <img src={icons.homeIconUrl} alt="" />
                         <span className="iconDescription">home</span>
-                    </div>
+                    </Link>
 
-                    <div className="iconDiv">
+                    <Link className="iconDiv" to={'/updates'}>
                         <img src={icons.updatesIconUrl} alt="" />
                         <span className="iconDescription">updates</span>
-                    </div>
+                    </Link>
 
                     <div className="iconDiv">
                         <img src={icons.starIconUrl} alt="" />
@@ -25,6 +28,7 @@ const Navigation = (icons: IconProps) => {
                     </div>
                 </div>
             </div>
+            <Outlet />
         </div>
     )
 }
