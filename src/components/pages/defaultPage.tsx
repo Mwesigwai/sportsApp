@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import DefaultMainPageData from "./defaultPageMainData";
 import SelectedSportFilterModel from "../models/selectedSportFilterModel";
-import Header from "./pageComponents/mainAppHeader";
-import Navigation from "./pageComponents/navigation";
 import SearchComponent from "./pageComponents/searchComponent";
 import SelectedSportBar from "./pageComponents/selectedSportBar";
 import SearchResultMathes from "./pageComponents/searchResultMatches";
